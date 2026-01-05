@@ -1,0 +1,46 @@
+{
+  "name": "@perkos/scheme-exact",
+  "version": "1.0.0",
+  "description": "EIP-3009 TransferWithAuthorization verification utilities for x402 exact scheme payments",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup src/index.ts --format cjs,esm --dts",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "x402",
+    "eip-3009",
+    "payment",
+    "usdc",
+    "transfer-with-authorization",
+    "exact-scheme",
+    "viem"
+  ],
+  "author": "PerkOS",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/PerkOS-xyz/pkg-scheme-exact.git"
+  },
+  "dependencies": {
+    "@perkos/types-x402": "^1.0.0",
+    "@perkos/util-chains": "^1.0.0",
+    "viem": "^2.0.0"
+  },
+  "devDependencies": {
+    "tsup": "^8.0.0",
+    "typescript": "^5.0.0"
+  }
+}
