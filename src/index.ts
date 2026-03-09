@@ -283,7 +283,7 @@ export class ExactSchemeVerifier {
 
     // Validate amount (should not exceed max)
     const value = BigInt(auth.value);
-    const maxAmount = BigInt(requirements.maxAmountRequired);
+    const maxAmount = BigInt(requirements.maxAmountRequired || "0");
     if (value > maxAmount) {
       return false;
     }
